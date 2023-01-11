@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://q8wcob7n17pk"]
+
+[ext_resource type="Script" path="res://Scenes/Planets/Oberon.cs" id="1_4go3n"]
+
+[node name="Oberon" type="Node3D"]
+script = ExtResource("1_4go3n")

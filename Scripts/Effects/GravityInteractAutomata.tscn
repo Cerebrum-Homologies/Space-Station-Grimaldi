@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 30.0
+
+[node name="GravityInteractAutomata" type="RigidBody2D"]
+
+[node name="CollisionShape3D-Automata" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )

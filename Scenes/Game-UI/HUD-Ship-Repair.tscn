@@ -1,0 +1,28 @@
+[gd_scene load_steps=2 format=3 uid="uid://bya7toqp8wthp"]
+
+[ext_resource type="Script" path="res://Scenes/Game-UI/HUDShipRepair.cs" id="1"]
+
+[node name="HUDShipRepair" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -504.0
+offset_bottom = -490.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_right = 520.0
+offset_bottom = 110.0
+
+[node name="panel-MainTag" type="Panel" parent="PanelContainer"]
+layout_mode = 2
+
+[node name="Panel" type="Panel" parent="PanelContainer"]
+layout_mode = 2

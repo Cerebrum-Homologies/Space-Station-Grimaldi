@@ -1,0 +1,19 @@
+﻿Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Space-Station-Grimaldi", "Space-Station-Grimaldi.csproj", "{5C9F9762-F70C-438D-901E-EB72C05A70BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+	Debug|Any CPU = Debug|Any CPU
+	ExportDebug|Any CPU = ExportDebug|Any CPU
+	ExportRelease|Any CPU = ExportRelease|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5C9F9762-F70C-438D-901E-EB72C05A70BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C9F9762-F70C-438D-901E-EB72C05A70BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C9F9762-F70C-438D-901E-EB72C05A70BC}.ExportDebug|Any CPU.ActiveCfg = ExportDebug|Any CPU
+		{5C9F9762-F70C-438D-901E-EB72C05A70BC}.ExportDebug|Any CPU.Build.0 = ExportDebug|Any CPU
+		{5C9F9762-F70C-438D-901E-EB72C05A70BC}.ExportRelease|Any CPU.ActiveCfg = ExportRelease|Any CPU
+		{5C9F9762-F70C-438D-901E-EB72C05A70BC}.ExportRelease|Any CPU.Build.0 = ExportRelease|Any CPU
+	EndGlobalSection
+EndGlobal

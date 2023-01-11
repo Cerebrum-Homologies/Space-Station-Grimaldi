@@ -1,0 +1,83 @@
+[gd_scene load_steps=11 format=3 uid="uid://d23tfhyol0va8"]
+
+[ext_resource type="Script" path="res://Scenes/Effects/ClusterParticles.cs" id="1"]
+[ext_resource type="Texture2D" uid="uid://d3wu7bksxmsq1" path="res://Assets/Images/FX/64x64/64px_particles_tri#1.png" id="2"]
+[ext_resource type="Texture2D" uid="uid://b3mt1cucd2qca" path="res://Assets/Images/FX/64x64/64px_particles_2dots.png" id="3"]
+[ext_resource type="Texture2D" uid="uid://dncbh7ggit4u6" path="res://Assets/Images/FX/primeshapes_particles_trireg_pyramid_3dots.png" id="4"]
+
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(126, 66)
+
+[sub_resource type="ParticleProcessMaterial" id="2"]
+gravity = Vector3(0, 98, 0)
+
+[sub_resource type="RectangleShape2D" id="3"]
+size = Vector2(122, 54)
+
+[sub_resource type="ParticleProcessMaterial" id="4"]
+lifetime_randomness = 0.15
+gravity = Vector3(0, 98, 0)
+color = Color(0.172549, 0.0980392, 0.592157, 1)
+
+[sub_resource type="RectangleShape2D" id="5"]
+size = Vector2(114, 58)
+
+[sub_resource type="ParticleProcessMaterial" id="6"]
+gravity = Vector3(0, 98, 0)
+
+[node name="ClusterParticles" type="Node2D"]
+script = ExtResource("1")
+
+[node name="Kinematic-Cluster1" type="CharacterBody2D" parent="."]
+position = Vector2(262, -1)
+
+[node name="CollisionShape3D-Cluster1" type="CollisionShape2D" parent="Kinematic-Cluster1"]
+shape = SubResource("1")
+
+[node name="GPUParticles3D-Cluster1" type="GPUParticles2D" parent="Kinematic-Cluster1"]
+emitting = false
+amount = 16
+process_material = SubResource("2")
+texture = ExtResource("3")
+lifetime = 1.5
+explosiveness = 0.2
+fixed_fps = 40
+
+[node name="Kinematic-Cluster2" type="CharacterBody2D" parent="."]
+position = Vector2(616, 0)
+
+[node name="CollisionShape3D-Cluster2" type="CollisionShape2D" parent="Kinematic-Cluster2"]
+shape = SubResource("3")
+
+[node name="GPUParticles3D-Cluster2" type="GPUParticles2D" parent="Kinematic-Cluster2"]
+emitting = false
+amount = 22
+process_material = SubResource("4")
+texture = ExtResource("2")
+lifetime = 1.75
+fixed_fps = 40
+
+[node name="Kinematic-Cluster3" type="CharacterBody2D" parent="."]
+position = Vector2(450.695, 464.261)
+
+[node name="CollisionShape3D-Cluster3" type="CollisionShape2D" parent="Kinematic-Cluster3"]
+shape = SubResource("5")
+
+[node name="GPUParticles3D-Cluster3" type="GPUParticles2D" parent="Kinematic-Cluster3"]
+emitting = false
+amount = 16
+process_material = SubResource("6")
+texture = ExtResource("4")
+
+[node name="InfluenceZone" type="Node2D" parent="."]
+position = Vector2(444.828, 248.53)
+
+[node name="Area3D-InfluenceZone" type="Area2D" parent="InfluenceZone"]
+gravity_point = true
+gravity_point_distance_scale = 700.0
+gravity = 200.0
+linear_damp = 0.27
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="InfluenceZone/Area3D-InfluenceZone"]
+position = Vector2(0.0545654, -1.1701)
+polygon = PackedVector2Array(38, 1, 21, -26, -24, -25, -39, 4, 1, 32)
